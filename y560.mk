@@ -29,6 +29,11 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensord \
+    sensors.msm8909
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
