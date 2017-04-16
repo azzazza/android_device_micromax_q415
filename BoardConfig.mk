@@ -16,7 +16,7 @@
 #
 
 LOCAL_PATH := device/archos/ac50ehe
-TARGET_OTA_ASSERT_DEVICE := y560,ac50ehe,50e_Helium
+TARGET_OTA_ASSERT_DEVICE := ac50ehe,50e_Helium
 # Platform
 TARGET_NO_BOOTLOADER := true
 
