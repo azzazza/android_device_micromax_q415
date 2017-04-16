@@ -20,6 +20,8 @@ TARGET_OTA_ASSERT_DEVICE := y560,ac50ehe,50e_Helium
 # Platform
 TARGET_NO_BOOTLOADER := true
 
+TARGET_USES_AOSP := true
+
 TARGET_BOARD_PLATFORM := msm8909
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno304
 TARGET_BOOTLOADER_BOARD_NAME := msm8909
@@ -135,6 +137,9 @@ BOARD_SEPOLICY_UNION += \
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun1/file
+
+#GPS
+USE_DEVICE_SPECIFIC_GPS := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
