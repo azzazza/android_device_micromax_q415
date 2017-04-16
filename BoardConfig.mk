@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/y560
+LOCAL_PATH := device/archos/ac50ehe
 TARGET_OTA_ASSERT_DEVICE := y560,ac50ehe,50e_Helium
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -124,7 +124,7 @@ BOARD_NO_SECURE_DISCARD := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/huawei/y560/sepolicy
+BOARD_SEPOLICY_DIRS += device/archos/ac50ehe/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
