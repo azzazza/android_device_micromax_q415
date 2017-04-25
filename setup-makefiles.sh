@@ -18,8 +18,8 @@
 set -e
 
 # Required!
-DEVICE=ac50ehe
-VENDOR=archos
+DEVICE=q415
+VENDOR=micromax
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
