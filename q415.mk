@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/archos/ac50ehe/overlay
+DEVICE_PACKAGE_OVERLAYS += device/micromax/q415/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-$(call inherit-product-if-exists, vendor/archos/ac50ehe/ac50ehe-vendor.mk)
+$(call inherit-product-if-exists, vendor/micromax/q415/q415-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -118,11 +118,11 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/archos/ac50ehe/ramdisk,root)
+    $(call find-copy-subdir-files,*,device/micromax/q415/ramdisk,root)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/archos/ac50ehe/prebuilt/system,system)
+    $(call find-copy-subdir-files,*,device/micromax/q415/prebuilt/system,system)
 
 # Media codecs
 PRODUCT_COPY_FILES += \
