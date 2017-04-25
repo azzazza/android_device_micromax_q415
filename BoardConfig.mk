@@ -15,8 +15,8 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/archos/ac50ehe
-TARGET_OTA_ASSERT_DEVICE := ac50ehe,50e_Helium
+LOCAL_PATH := device/micromax/q415
+TARGET_OTA_ASSERT_DEVICE := q415
 # Platform
 TARGET_NO_BOOTLOADER := true
 
@@ -124,7 +124,7 @@ BOARD_NO_SECURE_DISCARD := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/archos/ac50ehe/sepolicy
+BOARD_SEPOLICY_DIRS += device/micromax/q415/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
