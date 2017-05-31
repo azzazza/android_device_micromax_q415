@@ -413,6 +413,12 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
 
+service mpdecision /system/bin/mpdecision
+    class late_start
+    user root
+    group root system readproc
+    disabled
+
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
     user root
@@ -442,3 +448,4 @@ service vm_bms /system/bin/vm_bms
     user root
     group root
     disabled
+

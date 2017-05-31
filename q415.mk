@@ -16,6 +16,8 @@
 
 DEVICE_PACKAGE_OVERLAYS += device/micromax/q415/overlay
 
+
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/micromax/q415/q415-vendor.mk)
@@ -41,6 +43,17 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix
+
+# Browser
+PRODUCT_PACKAGES += \
+    -Gello \
+	Jelly
+
+# FileManager
+PRODUCT_PACKAGES += \
+    -CMFileManager
+
+
 
 # Camera
 PRODUCT_PACKAGES += \

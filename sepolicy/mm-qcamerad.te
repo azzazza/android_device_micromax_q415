@@ -1,5 +1,2 @@
-unix_socket_connect(mm-qcamerad, property, init)
-allow mm-qcamerad system_file:file execmod;
-
-# camera.presnapshot.state property
-allow mm-qcamerad camera_prop:property_service set;
+allow mm-qcamerad system_data_file:dir { add_name remove_name write };
+allow mm-qcamerad system_data_file:sock_file unlink;

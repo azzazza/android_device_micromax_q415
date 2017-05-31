@@ -891,7 +891,7 @@ case "$target" in
         echo 0 > /sys/module/msm_thermal/core_control/enabled
         echo 1 > /sys/devices/system/cpu/cpu0/online
         echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-        echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 400000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         # enable thermal core_control now
         echo 1 > /sys/module/msm_thermal/core_control/enabled
 
@@ -900,7 +900,7 @@ case "$target" in
         echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
         echo 998400 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        echo "1 800000:85 998400:90 1094400:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+        echo "1 400000:50 533000:70 800000:85 998400:90 1094400:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
 
@@ -914,7 +914,7 @@ case "$target" in
 	insmod /system/lib/modules/core_ctl.ko
 	echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
         max_freq=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq`
-        min_freq=800000
+        min_freq=400000
         echo $((min_freq*100 / max_freq)) $((min_freq*100 / max_freq)) $((66*1000000 / max_freq)) \
 	$((55*1000000 / max_freq)) > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
         echo $((33*1000000 / max_freq)) > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
@@ -1124,3 +1124,10 @@ echo 50 > /sys/module/process_reclaim/parameters/pr_pressure_min
 echo 70 > /sys/module/process_reclaim/parameters/pr_pressure_max
 echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
 echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
+
+# Install service sysinit (/system/etc/init.d)
+#/system/bin/logwrapper /system/bin/sysinit
+
+#Kernel fix
+#/system/bin/mpdecision
+

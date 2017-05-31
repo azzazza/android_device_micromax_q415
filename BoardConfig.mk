@@ -14,15 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+FORCE_32_BIT := true
 LOCAL_PATH := device/micromax/q415
-TARGET_OTA_ASSERT_DEVICE := q415
+TARGET_OTA_ASSERT_DEVICE := q415,Q415
 # Platform
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOARD_PLATFORM := msm8909
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno304
 TARGET_BOOTLOADER_BOARD_NAME := msm8909
+#TARGET_BOARD_SUFFIX := _32
 
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -36,18 +37,22 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=softfp
 # Inline kernel building
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive earlyprintk
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 TARGET_KERNEL_CONFIG := msm8909_defconfig
-TARGET_KERNEL_SOURCE := kernel/archos/msm8909
+TARGET_KERNEL_SOURCE := kernel/micromax/q415
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
 LZMA_RAMDISK_TARGETS := recovery
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
+
+# GPS
+#TARGET_NO_RPC := true
+#USE_DEVICE_SPECIFIC_GPS := true
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
@@ -100,6 +105,8 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Partition sizes
+#TARGET_USERIMAGES_USE_EXT4 := true
+#TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x02000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x02000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2053531648

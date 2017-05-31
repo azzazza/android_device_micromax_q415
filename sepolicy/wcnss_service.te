@@ -1,2 +1,2 @@
-# wcnss - huawei wifi mac file
-allow wcnss_service wcnss_persist_file:file { read getattr open };
+allow wcnss_service oeminfo_server:unix_stream_socket connectto;
+allow wcnss_service socket_device:sock_file write;
