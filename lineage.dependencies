@@ -10,5 +10,15 @@
   {
     "repository": "android_hardware_qcom_fm",
     "target_path": "hardware/qcom/fm"
-  }
+  },
+ {
+   "repository" : "azzazza/proprietary_vendor_micromax_q415",
+   "target_path": "vendor/micromax",
+   "branch"     :  "cm-14.1"
+ },
+ {
+   "repository" : "azzazza/android_kernel_micromax_q415",
+   "target_path": "kernel/micromax/q415",
+   "branch"     : "cm-14.1"
+ }
 ]

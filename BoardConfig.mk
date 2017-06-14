@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 FORCE_32_BIT := true
-LOCAL_PATH := device/micromax/q415
+LOCAL_PATH := device/micromax/Q415
 TARGET_OTA_ASSERT_DEVICE := q415,Q415
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -131,7 +131,7 @@ BOARD_NO_SECURE_DISCARD := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/micromax/q415/sepolicy
+BOARD_SEPOLICY_DIRS += device/micromax/Q415/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
