@@ -87,8 +87,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8909
 
 # Doze
-PRODUCT_PACKAGES += \
-    DozeService
+#PRODUCT_PACKAGES += \
+#    DozeService
 
 # Ebtables
 PRODUCT_PACKAGES += \

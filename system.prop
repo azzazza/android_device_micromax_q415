@@ -78,7 +78,7 @@ ro.sys.fw.trim_enable_memory=1073741824
 ro.sys.fw.use_trim_settings=true
 
 # Perf
-ro.core_ctl_min_cpu=1
+ro.core_ctl_min_cpu=2
 ro.core_ctl_max_cpu=4
 ro.vendor.extension_library=libqti-perfd-client.so
 
