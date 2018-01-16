@@ -32,7 +32,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.sys.usb.config=adb \
     persist.logd.logpersistd=none
 
-PRODUCT_LOCALES := ru_RU
+#PRODUCT_LOCALES := ru_RU
 
 # ANT+
 PRODUCT_PACKAGES += \
