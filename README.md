@@ -1,1 +1,1 @@
-Lineage OS 14.1 device configuration for Micromax Q415 Pace 4G. 
+crDroidAndroid-7.1.2 device configuration for Micromax Q415 Pace 4G. 
