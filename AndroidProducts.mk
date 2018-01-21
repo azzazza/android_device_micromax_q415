@@ -1,2 +1,0 @@
-PRODUCT_MAKEFILES := \
-$(LOCAL_DIR)/aosp_Q415.mk \
