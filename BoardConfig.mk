@@ -98,6 +98,7 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
 # Hardware tunables framework
+BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := \
     hardware/cyanogen/cmhw \
     $(LOCAL_PATH)/cmhw
