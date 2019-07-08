@@ -1,1 +1,1 @@
-AEX OS n device configuration for Micromax Q415 Pace 4G.
+Carbon OS n device configuration for Micromax Q415 Pace 4G.
