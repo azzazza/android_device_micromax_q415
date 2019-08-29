@@ -1,1 +1,1 @@
-add_lunch_combo lineage_Q415-userdebug
+add_lunch_combo aosp_Q415-userdebug
